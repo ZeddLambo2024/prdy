@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  targetReleaseVersion: MyString
+  dateExpectedStartWork: 2018-09-18
+  documentStatus: MyString
+  documentOwner: MyString
+  designerOwner: MyString
+  developerOwner: MyString
+  qaOwner: MyString
+  goals: MyText
+  backgroundStrategicFit: MyText
+  assumptions: MyText
+  requirements: MyText
+  userInteractionNotes: MyText
+  questions: MyText
+  notDoing: MyText
+
+two:
+  title: MyString
+  targetReleaseVersion: MyString
+  dateExpectedStartWork: 2018-09-18
+  documentStatus: MyString
+  documentOwner: MyString
+  designerOwner: MyString
+  developerOwner: MyString
+  qaOwner: MyString
+  goals: MyText
+  backgroundStrategicFit: MyText
+  assumptions: MyText
+  requirements: MyText
+  userInteractionNotes: MyText
+  questions: MyText
+  notDoing: MyText

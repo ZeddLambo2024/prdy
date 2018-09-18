@@ -1,0 +1,79 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @prd.title %>
+</p>
+
+<p>
+  <strong>Targetreleaseversion:</strong>
+  <%= @prd.targetReleaseVersion %>
+</p>
+
+<p>
+  <strong>Dateexpectedstartwork:</strong>
+  <%= @prd.dateExpectedStartWork %>
+</p>
+
+<p>
+  <strong>Documentstatus:</strong>
+  <%= @prd.documentStatus %>
+</p>
+
+<p>
+  <strong>Documentowner:</strong>
+  <%= @prd.documentOwner %>
+</p>
+
+<p>
+  <strong>Designerowner:</strong>
+  <%= @prd.designerOwner %>
+</p>
+
+<p>
+  <strong>Developerowner:</strong>
+  <%= @prd.developerOwner %>
+</p>
+
+<p>
+  <strong>Qaowner:</strong>
+  <%= @prd.qaOwner %>
+</p>
+
+<p>
+  <strong>Goals:</strong>
+  <%= @prd.goals %>
+</p>
+
+<p>
+  <strong>Backgroundstrategicfit:</strong>
+  <%= @prd.backgroundStrategicFit %>
+</p>
+
+<p>
+  <strong>Assumptions:</strong>
+  <%= @prd.assumptions %>
+</p>
+
+<p>
+  <strong>Requirements:</strong>
+  <%= @prd.requirements %>
+</p>
+
+<p>
+  <strong>Userinteractionnotes:</strong>
+  <%= @prd.userInteractionNotes %>
+</p>
+
+<p>
+  <strong>Questions:</strong>
+  <%= @prd.questions %>
+</p>
+
+<p>
+  <strong>Notdoing:</strong>
+  <%= @prd.notDoing %>
+</p>
+
+<%= link_to 'Edit', edit_prd_path(@prd) %> |
+<%= link_to 'Back', prds_path %>

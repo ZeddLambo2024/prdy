@@ -1,0 +1,92 @@
+<%= form_with(model: prd, local: true) do |form| %>
+  <% if prd.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(prd.errors.count, "error") %> prohibited this prd from being saved:</h2>
+
+      <ul>
+      <% prd.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :prd_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :targetReleaseVersion %>
+    <%= form.text_field :targetReleaseVersion, id: :prd_targetReleaseVersion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dateExpectedStartWork %>
+    <%= form.date_select :dateExpectedStartWork, id: :prd_dateExpectedStartWork %>
+  </div>
+
+  <div class="field">
+    <%= form.label :documentStatus %>
+    <%= form.text_field :documentStatus, id: :prd_documentStatus %>
+  </div>
+
+  <div class="field">
+    <%= form.label :documentOwner %>
+    <%= form.text_field :documentOwner, id: :prd_documentOwner %>
+  </div>
+
+  <div class="field">
+    <%= form.label :designerOwner %>
+    <%= form.text_field :designerOwner, id: :prd_designerOwner %>
+  </div>
+
+  <div class="field">
+    <%= form.label :developerOwner %>
+    <%= form.text_field :developerOwner, id: :prd_developerOwner %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qaOwner %>
+    <%= form.text_field :qaOwner, id: :prd_qaOwner %>
+  </div>
+
+  <div class="field">
+    <%= form.label :goals %>
+    <%= form.text_area :goals, id: :prd_goals %>
+  </div>
+
+  <div class="field">
+    <%= form.label :backgroundStrategicFit %>
+    <%= form.text_area :backgroundStrategicFit, id: :prd_backgroundStrategicFit %>
+  </div>
+
+  <div class="field">
+    <%= form.label :assumptions %>
+    <%= form.text_area :assumptions, id: :prd_assumptions %>
+  </div>
+
+  <div class="field">
+    <%= form.label :requirements %>
+    <%= form.text_area :requirements, id: :prd_requirements %>
+  </div>
+
+  <div class="field">
+    <%= form.label :userInteractionNotes %>
+    <%= form.text_area :userInteractionNotes, id: :prd_userInteractionNotes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :questions %>
+    <%= form.text_area :questions, id: :prd_questions %>
+  </div>
+
+  <div class="field">
+    <%= form.label :notDoing %>
+    <%= form.text_area :notDoing, id: :prd_notDoing %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
