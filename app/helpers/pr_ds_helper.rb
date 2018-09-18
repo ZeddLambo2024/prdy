@@ -1,2 +1,0 @@
-module PrDsHelper
-end

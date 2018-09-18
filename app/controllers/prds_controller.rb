@@ -1,4 +1,4 @@
-class PrDsController < ApplicationController
+class PrdsController < ApplicationController
   before_action :set_prd, only: [:show, :edit, :update, :destroy]
 
   # GET /prds

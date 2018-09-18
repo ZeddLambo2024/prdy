@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class PrDsControllerTest < ActionDispatch::IntegrationTest
+class PrdsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @prd = prds(:one)
   end
