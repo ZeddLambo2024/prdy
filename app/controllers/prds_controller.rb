@@ -1,4 +1,4 @@
-class prdsController < ApplicationController
+class PrdsController < ApplicationController
   before_action :set_prd, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:show]
   before_action :correct_user, only: [:edit, :update, :destroy]
@@ -16,6 +16,8 @@ class prdsController < ApplicationController
   end
 
   def edit
+     if @prd.update(prd_params)
+      redirect_to @prd, notice: 'Your PRD has been successfully updated.'
   end
 
   def create
