@@ -20,9 +20,13 @@
         <td><%= prd.targetReleaseVersion %></td>
         <td><%= prd.documentStatus %></td>
         <td><%= prd.documentOwner %></td>
+
+<% if pin.user == current_user %>
         <td><%= link_to 'Show', prd %></td>
         <td><%= link_to 'Edit', edit_prd_path(prd) %></td>
         <td><%= link_to 'Destroy', prd, method: :delete, data: { confirm: 'Wow, you really want to delete your hard work?' } %></td>
+        <% end %>
+
       </tr>
     <% end %>
   </tbody>
