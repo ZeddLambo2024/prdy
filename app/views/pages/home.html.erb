@@ -4,7 +4,7 @@
      <center><h1><b>Product Spec Docs</b> are <u>Hard</u></h1>
      	<h3>Get the tool that brings seamless organization <br>and simplicity to Product Managers. </h3>Free. Unlimited PRD's. Solid Templates. Easy to Store, Find, and Share.<br><br>
      <% if user_signed_in? %>
-          # do something
+          <%= link_to "Go to PRDs", "/prds", class: "btn btn-primary btn-lg" %>
      <% else %>
        <p>
          <%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %>

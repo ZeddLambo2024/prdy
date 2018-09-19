@@ -1,15 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Product Requirement Docs</h1>
+<h1>Product Requirement Documents</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Title</th>
+      <th>PRD Title</th>
       <th>Release Version</th>
       <th>Status</th>
       <th>PRD Owner</th>
-      <th colspan="3"></th>
     </tr>
   </thead>
 
@@ -20,12 +19,11 @@
         <td><%= prd.targetReleaseVersion %></td>
         <td><%= prd.documentStatus %></td>
         <td><%= prd.documentOwner %></td>
-
-<% if pin.user == current_user %>
+<% if prd.user == current_user %>
         <td><%= link_to 'Show', prd %></td>
         <td><%= link_to 'Edit', edit_prd_path(prd) %></td>
         <td><%= link_to 'Destroy', prd, method: :delete, data: { confirm: 'You really want to delete your hard work?' } %></td>
-        <% end %>
+     <% end %>
       </tr>
     <% end %>
   </tbody>
@@ -33,7 +31,7 @@
 
 <br>
 
-<% if user_signed_in? %>  <%= link_to '+ New PRD', new_prd_path%>
+<% if user_signed_in? %>  <%= link_to '+ Create New PRD', new_prd_path%>
 <% end %>
 
 
