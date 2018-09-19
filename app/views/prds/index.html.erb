@@ -24,7 +24,7 @@
 <% if pin.user == current_user %>
         <td><%= link_to 'Show', prd %></td>
         <td><%= link_to 'Edit', edit_prd_path(prd) %></td>
-        <td><%= link_to 'Destroy', prd, method: :delete, data: { confirm: 'Wow, you really want to delete your hard work?' } %></td>
+        <td><%= link_to 'Destroy', prd, method: :delete, data: { confirm: 'You really want to delete your hard work?' } %></td>
         <% end %>
       </tr>
     <% end %>
@@ -33,7 +33,7 @@
 
 <br>
 
-<% if user_signed_in? %>  <%= link_to '+ New PRD', new_prd_path %>
+<% if user_signed_in? %>  <%= link_to '+ New PRD', new_prd_path%>
 <% end %>
 
 

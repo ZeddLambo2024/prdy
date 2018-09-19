@@ -5,7 +5,7 @@ class PrdsController < ApplicationController
 
 
   def index
-    @prds = prd.all
+    @prds = Prd.all
   end
 
   def show
@@ -57,4 +57,5 @@ class PrdsController < ApplicationController
     def prd_params
       params.require(:prd).permit(:description, :image)
     end
+  end
 end
