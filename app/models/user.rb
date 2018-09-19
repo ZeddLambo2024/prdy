@@ -7,4 +7,3 @@ class User < ApplicationRecord
   has_many :prds
 end
 
-rails generate migration add_user_id_to_prds user_id:integer:index
