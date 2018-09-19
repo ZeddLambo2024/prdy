@@ -1,10 +1,10 @@
-<%= form_with(model: prd, local: true) do |form| %>
-  <% if prd.errors.any? %>
+<%= form_with(model: @prds, local: true) do |form| %>
+  <% if @prds.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(prd.errors.count, "error") %> prohibited this prd from being saved:</h2>
+      <h2><%= pluralize(@prds.errors.count, "error") %> prohibited this prd from being saved:</h2>
 
       <ul>
-      <% prd.errors.full_messages.each do |message| %>
+      <% @prds.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
