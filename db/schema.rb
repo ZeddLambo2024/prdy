@@ -10,7 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180919020800) do
+ActiveRecord::Schema.define(version: 20180920022537) do
+
+  create_table "docs", force: :cascade do |t|
+    t.string "title"
+    t.string "targetReleaseVersion"
+    t.date "dateExpectedStartWork"
+    t.string "documentStatus"
+    t.string "documentOwner"
+    t.string "designerOwner"
+    t.string "developerOwner"
+    t.string "qaOwner"
+    t.text "goals"
+    t.text "backgroundStrategicFit"
+    t.text "assumptions"
+    t.text "requirements"
+    t.text "userInteractionNotes"
+    t.text "questions"
+    t.text "notDoing"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_docs_on_user_id"
+  end
 
   create_table "prds", force: :cascade do |t|
     t.string "title"

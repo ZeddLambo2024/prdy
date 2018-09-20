@@ -1,6 +1,6 @@
-class CreatePrds < ActiveRecord::Migration[5.1]
+class CreateDocs < ActiveRecord::Migration[5.1]
   def change
-    create_table :prds do |t|
+    create_table :docs do |t|
       t.string :title
       t.string :targetReleaseVersion
       t.date :dateExpectedStartWork

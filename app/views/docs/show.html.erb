@@ -2,78 +2,78 @@
 
 <p>
   <strong>Title:</strong>
-  <%= @prd.title %>
+  <%= @doc.title %>
 </p>
 
 <p>
   <strong>Targetreleaseversion:</strong>
-  <%= @prd.targetReleaseVersion %>
+  <%= @doc.targetReleaseVersion %>
 </p>
 
 <p>
   <strong>Dateexpectedstartwork:</strong>
-  <%= @prd.dateExpectedStartWork %>
+  <%= @doc.dateExpectedStartWork %>
 </p>
 
 <p>
   <strong>Documentstatus:</strong>
-  <%= @prd.documentStatus %>
+  <%= @doc.documentStatus %>
 </p>
 
 <p>
   <strong>Documentowner:</strong>
-  <%= @prd.documentOwner %>
+  <%= @doc.documentOwner %>
 </p>
 
 <p>
   <strong>Designerowner:</strong>
-  <%= @prd.designerOwner %>
+  <%= @doc.designerOwner %>
 </p>
 
 <p>
   <strong>Developerowner:</strong>
-  <%= @prd.developerOwner %>
+  <%= @doc.developerOwner %>
 </p>
 
 <p>
   <strong>Qaowner:</strong>
-  <%= @prd.qaOwner %>
+  <%= @doc.qaOwner %>
 </p>
 
 <p>
   <strong>Goals:</strong>
-  <%= @prd.goals %>
+  <%= @doc.goals %>
 </p>
 
 <p>
   <strong>Backgroundstrategicfit:</strong>
-  <%= @prd.backgroundStrategicFit %>
+  <%= @doc.backgroundStrategicFit %>
 </p>
 
 <p>
   <strong>Assumptions:</strong>
-  <%= @prd.assumptions %>
+  <%= @doc.assumptions %>
 </p>
 
 <p>
   <strong>Requirements:</strong>
-  <%= @prd.requirements %>
+  <%= @doc.requirements %>
 </p>
 
 <p>
   <strong>Userinteractionnotes:</strong>
-  <%= @prd.userInteractionNotes %>
+  <%= @doc.userInteractionNotes %>
 </p>
 
 <p>
   <strong>Questions:</strong>
-  <%= @prd.questions %>
+  <%= @doc.questions %>
 </p>
 
 <p>
   <strong>Notdoing:</strong>
-  <%= @prd.notDoing %>
+  <%= @doc.notDoing %>
 </p>
 
-<% if @prd.user == current_user %>  <%= link_to 'Edit', edit_prd_path(@prd) %><% end %>
-<%= link_to 'Back', prds_path %>
+<%= link_to 'Edit', edit_doc_path(@doc) %> |
+<%= link_to 'Back', docs_path %>

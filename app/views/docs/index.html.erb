@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Docs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Targetreleaseversion</th>
+      <th>Dateexpectedstartwork</th>
+      <th>Documentstatus</th>
+      <th>Documentowner</th>
+      <th>Designerowner</th>
+      <th>Developerowner</th>
+      <th>Qaowner</th>
+      <th>Goals</th>
+      <th>Backgroundstrategicfit</th>
+      <th>Assumptions</th>
+      <th>Requirements</th>
+      <th>Userinteractionnotes</th>
+      <th>Questions</th>
+      <th>Notdoing</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @docs.each do |doc| %>
+      <tr>
+        <td><%= doc.title %></td>
+        <td><%= doc.targetReleaseVersion %></td>
+        <td><%= doc.dateExpectedStartWork %></td>
+        <td><%= doc.documentStatus %></td>
+        <td><%= doc.documentOwner %></td>
+        <td><%= doc.designerOwner %></td>
+        <td><%= doc.developerOwner %></td>
+        <td><%= doc.qaOwner %></td>
+        <td><%= doc.goals %></td>
+        <td><%= doc.backgroundStrategicFit %></td>
+        <td><%= doc.assumptions %></td>
+        <td><%= doc.requirements %></td>
+        <td><%= doc.userInteractionNotes %></td>
+        <td><%= doc.questions %></td>
+        <td><%= doc.notDoing %></td>
+        <td><%= link_to 'Show', doc %></td>
+        <td><%= link_to 'Edit', edit_doc_path(doc) %></td>
+        <td><%= link_to 'Destroy', doc, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Doc', new_doc_path %>
