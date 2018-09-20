@@ -1,55 +1,39 @@
-<p id="notice"><%= notice %></p>
+<div class="alert alert-primary" role="alert"><%= notice %></div>
+<div class = "panel panel-default">
+  <div class = "panel-heading">
 
-<h1>Docs</h1>
-
-<table>
-  <thead>
+<h1>PRDs</h1></div>
+<div class = "panel-body">
+    <table class = "table table-default">   
+      <thead>
     <tr>
-      <th>Title</th>
-      <th>Targetreleaseversion</th>
-      <th>Dateexpectedstartwork</th>
-      <th>Documentstatus</th>
-      <th>Documentowner</th>
-      <th>Designerowner</th>
-      <th>Developerowner</th>
-      <th>Qaowner</th>
-      <th>Goals</th>
-      <th>Backgroundstrategicfit</th>
-      <th>Assumptions</th>
-      <th>Requirements</th>
-      <th>Userinteractionnotes</th>
-      <th>Questions</th>
-      <th>Notdoing</th>
-      <th colspan="3"></th>
+      <th>Feature Title</th>
+      <th>Release Version</th>
+      <th>Release Date</th>
+      <th>Status</th>
+      <th>Doc Owner Email</th>
     </tr>
   </thead>
 
   <tbody>
+   
     <% @docs.each do |doc| %>
+    <% if doc.user == current_user %> 
       <tr>
         <td><%= doc.title %></td>
         <td><%= doc.targetReleaseVersion %></td>
         <td><%= doc.dateExpectedStartWork %></td>
         <td><%= doc.documentStatus %></td>
-        <td><%= doc.documentOwner %></td>
-        <td><%= doc.designerOwner %></td>
-        <td><%= doc.developerOwner %></td>
-        <td><%= doc.qaOwner %></td>
-        <td><%= doc.goals %></td>
-        <td><%= doc.backgroundStrategicFit %></td>
-        <td><%= doc.assumptions %></td>
-        <td><%= doc.requirements %></td>
-        <td><%= doc.userInteractionNotes %></td>
-        <td><%= doc.questions %></td>
-        <td><%= doc.notDoing %></td>
-        <td><%= link_to 'Show', doc %></td>
-        <td><%= link_to 'Edit', edit_doc_path(doc) %></td>
-        <td><%= link_to 'Destroy', doc, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= doc.user.try(:email) %></td>
+        <td><%= link_to 'View', doc, class: "btn btn-warning" %></td>
+        <td><%= link_to 'Edit', edit_doc_path(doc),  class: "btn btn-light"%> </td>
+        <!--<td><%= link_to 'Delete', doc, method: :delete, data: {confirm: 'You sure?'}, class: "btn btn-danger" %></td>-->
       </tr>
+      <% end %>
     <% end %>
   </tbody>
 </table>
-
+</div>
+ <div class = "panel-footer">
 <br>
-
-<%= link_to 'New Doc', new_doc_path %>
+<% if user_signed_in? %><%= link_to '+ Create a New PRD', new_doc_path, class: "btn btn-success" %><% end %></div></div>

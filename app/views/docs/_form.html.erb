@@ -1,3 +1,4 @@
+
 <%= form_with(model: doc, local: true) do |form| %>
   <% if doc.errors.any? %>
     <div id="error_explanation">
@@ -11,82 +12,80 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :title %>
-    <%= form.text_field :title, id: :doc_title %>
+    <%= form.text_field :title, id: :doc_title, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :targetReleaseVersion %>
-    <%= form.text_field :targetReleaseVersion, id: :doc_targetReleaseVersion %>
+  <div class="form-group">
+    <%= form.label :targetReleaseVersion%>
+    <%= form.text_field :targetReleaseVersion, id: :doc_targetReleaseVersion, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :dateExpectedStartWork %>
-    <%= form.date_select :dateExpectedStartWork, id: :doc_dateExpectedStartWork %>
+    <%= form.date_select :dateExpectedStartWork, id: :doc_dateExpectedStartWork, class: "form-control" %>
   </div>
 
-  <div class="field">
+ <div class="form-group">
     <%= form.label :documentStatus %>
-    <%= form.text_field :documentStatus, id: :doc_documentStatus %>
+    <%= form.text_field :documentStatus, id: :doc_documentStatus, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :documentOwner %>
-    <%= form.text_field :documentOwner, id: :doc_documentOwner %>
+    <%= form.text_field :documentOwner, id: :doc_documentOwner, class: "form-control" %>
   </div>
 
-  <div class="field">
+ <div class="form-group">
     <%= form.label :designerOwner %>
-    <%= form.text_field :designerOwner, id: :doc_designerOwner %>
+    <%= form.text_field :designerOwner, id: :doc_designerOwner, class: "form-control" %>
   </div>
 
-  <div class="field">
+ <div class="form-group">
     <%= form.label :developerOwner %>
-    <%= form.text_field :developerOwner, id: :doc_developerOwner %>
+    <%= form.text_field :developerOwner, id: :doc_developerOwner, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :qaOwner %>
-    <%= form.text_field :qaOwner, id: :doc_qaOwner %>
+    <%= form.text_field :qaOwner, id: :doc_qaOwner, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :goals %>
-    <%= form.text_area :goals, id: :doc_goals %>
+    <%= form.text_area :goals, id: :doc_goals, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :backgroundStrategicFit %>
-    <%= form.text_area :backgroundStrategicFit, id: :doc_backgroundStrategicFit %>
+    <%= form.text_area :backgroundStrategicFit, id: :doc_backgroundStrategicFit, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :assumptions %>
-    <%= form.text_area :assumptions, id: :doc_assumptions %>
+    <%= form.text_area :assumptions, id: :doc_assumptions, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :requirements %>
-    <%= form.text_area :requirements, id: :doc_requirements %>
+    <%= form.text_area :requirements, id: :doc_requirements, class: "form-control" %>
   </div>
 
-  <div class="field">
+ <div class="form-group">
     <%= form.label :userInteractionNotes %>
-    <%= form.text_area :userInteractionNotes, id: :doc_userInteractionNotes %>
+    <%= form.text_area :userInteractionNotes, id: :doc_userInteractionNotes, class: "form-control" %>
   </div>
 
-  <div class="field">
+<div class="form-group">
     <%= form.label :questions %>
-    <%= form.text_area :questions, id: :doc_questions %>
+    <%= form.text_area :questions, id: :doc_questions, class: "form-control" %>
   </div>
 
-  <div class="field">
+<div class="form-group">
     <%= form.label :notDoing %>
-    <%= form.text_area :notDoing, id: :doc_notDoing %>
+    <%= form.text_area :notDoing, id: :doc_notDoing,  class: "form-control" %>
   </div>
-
-  <div class="actions">
+  <div class="panel-footer">
     <%= form.submit %>
-  </div>
 <% end %>
