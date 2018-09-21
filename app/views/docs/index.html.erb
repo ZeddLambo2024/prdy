@@ -27,7 +27,7 @@
         <td><%= doc.user.try(:email) %></td>
         <td><%= link_to 'View', doc, class: "btn btn-warning" %></td>
         <td><%= link_to 'Edit', edit_doc_path(doc),  class: "btn btn-light"%> </td>
-        <td><%= link_to  doc, method: :delete, data: {confirm: 'Are you sure?'} do%><span class = "glyphicon glyphicon-trash"></span></td><% end %>
+        <td><%= link_to  doc, :method => :delete, data: {confirm: 'Are you sure?'} do%><span class = "glyphicon glyphicon-trash"></span></td><% end %>
       </tr>
       <% end %>
     <% end %>
@@ -37,3 +37,6 @@
  <div class = "panel-footer">
 <br>
 <% if user_signed_in? %><%= link_to '+ Create a New PRD', new_doc_path, class: "btn btn-success btn-lg" %><% end %></div></div>
+<div class="center">
+  <%= will_paginate @docs, renderer: BootstrapPagination::Rails %>
+</div>
