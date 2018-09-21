@@ -1,4 +1,4 @@
-<div class="alert alert-primary" role="alert"><%= notice %></div>
+<%if notice=""%> <div class="alert alert-info" role="alert"><%= notice %></div> <%end%>
 <div class = "panel panel-default">
   <div class = "panel-heading">
 
@@ -27,7 +27,8 @@
         <td><%= doc.user.try(:email) %></td>
         <td><%= link_to 'View', doc, class: "btn btn-warning" %></td>
         <td><%= link_to 'Edit', edit_doc_path(doc),  class: "btn btn-light"%> </td>
-        <!--<td><%= link_to 'Delete', doc, method: :delete, data: {confirm: 'You sure?'}, class: "btn btn-danger" %></td>-->
+        <td><%= link_to 'Destroy', doc, confirm: 'Are you sure?', :method => :delete%></td>
+
       </tr>
       <% end %>
     <% end %>

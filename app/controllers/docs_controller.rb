@@ -54,7 +54,7 @@ class DocsController < ApplicationController
   # DELETE /docs/1
   # DELETE /docs/1.json
   def destroy
-    @doc.DELETE
+    @doc.delete
     redirect_to docs_url
   end
 
