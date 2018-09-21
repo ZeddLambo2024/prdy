@@ -38,5 +38,4 @@
 <br>
 <% if user_signed_in? %><%= link_to '+ Create a New PRD', new_doc_path, class: "btn btn-success btn-lg" %><% end %></div></div>
 <div class="center">
-  <%= will_paginate @docs, renderer: BootstrapPagination::Rails %>
 </div>
