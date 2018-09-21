@@ -27,7 +27,7 @@
         <td><%= doc.user.try(:email) %></td>
         <td><%= link_to 'View', doc, class: "btn btn-warning" %></td>
         <td><%= link_to 'Edit', edit_doc_path(doc),  class: "btn btn-light"%> </td>
-        <td><%= link_to 'Destroy', doc, confirm: 'Are you sure?', :method => :delete%></td>
+        <td><%= link_to 'Destroy', doc, data:{confirm: 'Are you sure?'}, :method => :delete%></td>
 
       </tr>
       <% end %>
