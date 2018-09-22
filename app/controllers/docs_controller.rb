@@ -24,7 +24,6 @@ class DocsController < ApplicationController
   # POST /docs
   # POST /docs.json
   def create
-    
     @doc = current_user.docs.new(doc_params)
     respond_to do |format|
       if @doc.save
