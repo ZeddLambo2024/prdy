@@ -20,8 +20,7 @@
     <% if doc.user == current_user %> 
       <tr>
         <td><%= doc.title %></td>
-
-        <td><%= doc.dateExpectedStartWork %></td>
+        <td><%= doc.targetReleaseVersion %></td>
         <td><%= doc.documentStatus%></td>
         <td><%= doc.qaOwner  %></td>
         <td><%= link_to 'View', doc, class: "btn btn-warning" %></td>
