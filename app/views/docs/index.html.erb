@@ -26,7 +26,7 @@
         <td><%= doc.user.try(:email) %></td>
         <td><%= link_to 'View', doc, class: "btn btn-warning" %></td>
         <td><%= link_to 'Edit', edit_doc_path(doc),  class: "btn btn-light"%> </td>
-        <td><%= link_to doc, :method => :delete, data: {confirm: 'Are you sure?'} do%><span class = "glyphicon glyphicon-trash"></span></td><% end %>
+        <td><%= link_to doc, :method => :delete, data: {confirm: 'You are about to delete a PRD, are you sure you want to continue?'} do%><span class = "glyphicon glyphicon-trash"></span></td><% end %>
       </tr>
       <% end %>
     <% end %>

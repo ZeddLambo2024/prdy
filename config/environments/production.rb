@@ -30,6 +30,7 @@ config.assets.js_compressor = Uglifier.new(harmony: true)
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
   config.serve_static_files = true
+  config.force_ssl = true
 
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
@@ -89,6 +90,6 @@ config.assets.js_compressor = Uglifier.new(harmony: true)
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
- config.action_mailer.default_url_options = { :host=> 'prdy.xyz'}
+ config.action_mailer.default_url_options = { :host=> 'https://prdy.xyz'}
 
 end
