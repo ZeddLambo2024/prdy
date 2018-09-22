@@ -11,81 +11,82 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="form-group">
-    <%= form.label :title %>
+<form class="needs-validation" novalidate>
+  <div class="form-row">
+    <div class="form-group col-md-4 mb-3">
+    <%= form.label "Title:" %>
     <%= form.text_field :title, id: :doc_title, class: "form-control" %>
   </div>
-
-  <div class="form-group">
-    <%= form.label :targetReleaseVersion%>
+<div class="form-group col-md-4 mb-3">
+    <%= form.label "Release Version (Expected):"%>
     <%= form.text_field :targetReleaseVersion, id: :doc_targetReleaseVersion, class: "form-control" %>
   </div>
-
-  <div class="form-group">
-    <%= form.label :dateExpectedStartWork %>
+<!--<div class="form-group col-md-4 mb-3">
+    <%= form.label "Starting Work On" %>
     <%= form.date_select :dateExpectedStartWork, id: :doc_dateExpectedStartWork, class: "form-control" %>
-  </div>
-
- <div class="form-group">
-    <%= form.label :documentStatus %>
+  </div>-->
+<div class="form-group col-md-4 mb-3">
+    <%= form.label "Status:" %>
     <%= form.text_field :documentStatus, id: :doc_documentStatus, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%= form.label :documentOwner %>
+</div>
+</div>
+<div class="form-row">
+<div class="form-group col-md-3 mb-3">
+    <%= form.label "Document Owner:"%>
     <%= form.text_field :documentOwner, id: :doc_documentOwner, class: "form-control" %>
-  </div>
-
- <div class="form-group">
-    <%= form.label :designerOwner %>
+</div>
+  <div class="form-group col-md-3 mb-3">
+    <%= form.label "Lead Designer:"%>
     <%= form.text_field :designerOwner, id: :doc_designerOwner, class: "form-control" %>
   </div>
-
- <div class="form-group">
-    <%= form.label :developerOwner %>
+<div class="form-group col-md-3 mb-3 ">
+    <%= form.label "Lead Developer:"%>
     <%= form.text_field :developerOwner, id: :doc_developerOwner, class: "form-control" %>
   </div>
-
-  <div class="form-group">
-    <%= form.label :qaOwner %>
+<div class="form-group col-md-3 mb-3">
+    <%= form.label "Lead QA:" %>
     <%= form.text_field :qaOwner, id: :doc_qaOwner, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%= form.label :goals %>
+  </div></div>
+  <div class="form-row">
+  <div class="form-group col-md-12">
+    <%= form.label "Goals of Feature:" %>
     <%= form.text_area :goals, id: :doc_goals, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%= form.label :backgroundStrategicFit %>
+  </div></div>
+<div class="form-row">
+  <div class="form-group col-md-12">
+    <%= form.label "Background & Strategic Fit:" %>
     <%= form.text_area :backgroundStrategicFit, id: :doc_backgroundStrategicFit, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%= form.label :assumptions %>
+  </div></div>
+  
+<div class="form-row">
+  <div class="form-group col-md-12">
+    <%= form.label "Any Assumptions:" %>
     <%= form.text_area :assumptions, id: :doc_assumptions, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%= form.label :requirements %>
+  </div></div>
+<div class="form-row">
+  <div class="form-group col-md-6">
+    <%= form.label "Feature Spec Requirements:" %>
     <%= form.text_area :requirements, id: :doc_requirements, class: "form-control" %>
   </div>
-
- <div class="form-group">
-    <%= form.label :userInteractionNotes %>
+ <div class="form-group col-md-6">
+    <%= form.label "User Interaction Notes:" %>
     <%= form.text_area :userInteractionNotes, id: :doc_userInteractionNotes, class: "form-control" %>
   </div>
-
-<div class="form-group">
-    <%= form.label :questions %>
+ </div>
+ <div class="form-row">
+<div class="form-group col-md-6">
+    <%= form.label "Open Questions:" %>
     <%= form.text_area :questions, id: :doc_questions, class: "form-control" %>
   </div>
-
-<div class="form-group">
-    <%= form.label :notDoing %>
+</div>
+<div class="form-row">
+<div class="form-group col-md-6">
+    <%= form.label "Not Doing (just to be clear):" %>
     <%= form.text_area :notDoing, id: :doc_notDoing,  class: "form-control" %>
-  </div>
-  <div class="panel-footer">
-    <%= form.submit%>
+  </div></div><div class="form-row">
+  <div class ="form-group col-md-4">
+ <%= form.submit class: "btn btn-success"%>
+</div></div>
 <% end %>
+</form>
+

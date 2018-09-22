@@ -1,6 +1,14 @@
-<h1>Editing Doc</h1>
-
+<div class = "panel panel-default">
+  <div class = "panel-heading">
+<h1>Editing '<%=@doc.title%>'</h1>
+</div>
+ <div class = "panel-body">
 <%= render 'form', doc: @doc %>
+</div>
+<div class ="panel-footer">
+<%= link_to 'View this PRD', @doc %> |
+<%= link_to 'Back to PRD List', docs_path %>
+</div>
+</div>
 
-<%= link_to 'Show', @doc %> |
-<%= link_to 'Back', docs_path %>
+

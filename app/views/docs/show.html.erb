@@ -1,10 +1,12 @@
+
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @doc.title %>
-</p>
-
+<div class = "panel panel-default">
+  <div class = "panel-heading">
+    <h1><%= @doc.title %></h1>
+</div>
+  <div class = "panel-body">
 <p>
   <strong>Targetreleaseversion:</strong>
   <%= @doc.targetReleaseVersion %>
@@ -74,6 +76,7 @@
   <strong>Notdoing:</strong>
   <%= @doc.notDoing %>
 </p>
-
-<%= link_to 'Edit', edit_doc_path(@doc) %> |
-<%= link_to 'Back', docs_path %>
+</div>
+  <div class = "panel-footer">
+<%= link_to 'Edit', edit_doc_path(@doc), class: "btn btn-warning" %> |
+<%= link_to 'Back', docs_path, class: "btn btn-info" %></div></div>
