@@ -1,7 +1,7 @@
 <div class="panel panel-default">
   <div class="panel-heading">
     <div class="panel-title">
-      <h1>Edit <%= resource_name.to_s.humanize %></h1>
+      <h1>Settings<% if current_user.admin=true %> <%= link_to "Hey there boss, go to Admin Portal", "/admin", class: "btn btn-info" %><% end %></h1>
     </div>
   </div>
   <div class="panel-body">
@@ -29,10 +29,11 @@
     <% end %>
   </div>
   <div class="panel-footer">
+    <% if current_user.admin=false %>
     <h3>Cancel my account</h3>
 
     <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete, class: "btn btn-warning" %></p>
-
+<% end %>
     <%= link_to "Back", :back %>
   </div>
 </div>

@@ -1,10 +1,14 @@
 
 
 <div class="jumbotron center">
-     <center><h1><b>Product Spec Docs</b> are <u>Hard</u></h1>
-     	<h3>Get the tool that brings seamless organization <br>and simplicity to Product Managers. </h3>Free. Unlimited PRD's. Solid Templates. Easy to Store, Find, and Share.<br><br>
+     <% if user_signed_in?%>
+     <center><br><h2><b>Welcome back!</h2></center><br><!--<p>We've been keeping the lights on while you've been away. Your spec docs are safe with us here. If you ever need a blank download of yours click here. </p>--><br>
+      <% else %>
+      <center><h1><b>Product Spec Docs</b> are <u>Hard</u></h1>
+      <h3>Get the tool that brings seamless organization <br>and simplicity to Product Managers. </h3>Free. Unlimited PRD's. Solid Templates. Easy to Store, Find, and Share.<br><br></center>
+      <% end %>
      <% if user_signed_in? %>
-          <%= link_to "View Your PRDs", "/docs", class: "btn btn-success btn-lg" %>
+          <%= link_to "Go to Your PRDs", "/docs", class: "btn btn-success btn-lg" %>
      <% else %>
        <p>
          <%= link_to "Log in", new_user_session_path, class: "btn btn-warning btn-lg" %>
@@ -12,3 +16,4 @@
        </p>
   <% end %>  </center>
 </div>
+<%=render 'pages/footer' %>
