@@ -52,39 +52,39 @@
   <div class="form-row">
   <div class="form-group col-md-12">
     <%= form.label "Goals of Feature:" %>
-    <%= form.text_area :goals, id: :doc_goals, class: "form-control" %>
+    <%= form.text_area :goals, id: :doc_goals, class: "form-control",:rows =>7 %>
   </div></div>
 <div class="form-row">
-  <div class="form-group col-md-12">
+  <div class="form-group col-md-6">
     <%= form.label "Background & Strategic Fit:" %>
-    <%= form.text_area :backgroundStrategicFit, id: :doc_backgroundStrategicFit, class: "form-control" %>
+    <%= form.text_area :backgroundStrategicFit, id: :doc_backgroundStrategicFit, class: "form-control",:rows =>8 %>
   </div></div>
   
 <div class="form-row">
-  <div class="form-group col-md-12">
+  <div class="form-group col-md-6">
     <%= form.label "Any Assumptions:" %>
-    <%= form.text_area :assumptions, id: :doc_assumptions, class: "form-control" %>
+    <%= form.text_area :assumptions, id: :doc_assumptions, class: "form-control", :rows =>8 %>
   </div></div>
 <div class="form-row">
   <div class="form-group col-md-6">
     <%= form.label "Feature Spec Requirements:" %>
-    <%= form.text_area :requirements, id: :doc_requirements, class: "form-control" %>
+    <%= form.text_area :requirements, id: :doc_requirements, class: "form-control",:rows =>12 %>
   </div>
  <div class="form-group col-md-6">
     <%= form.label "User Interaction Notes:" %>
-    <%= form.text_area :userInteractionNotes, id: :doc_userInteractionNotes, class: "form-control" %>
+    <%= form.text_area :userInteractionNotes, id: :doc_userInteractionNotes, class: "form-control",:rows =>12 %>
   </div>
  </div>
  <div class="form-row">
 <div class="form-group col-md-6">
     <%= form.label "Open Questions:" %>
-    <%= form.text_area :questions, id: :doc_questions, class: "form-control" %>
+    <%= form.text_area :questions, id: :doc_questions, class: "form-control", :rows =>8%>
   </div>
 </div>
 <div class="form-row">
 <div class="form-group col-md-6">
     <%= form.label "Not Doing (just to be clear):" %>
-    <%= form.text_area :notDoing, id: :doc_notDoing,  class: "form-control" %>
+    <%= form.text_area :notDoing, id: :doc_notDoing,  class: "form-control",:rows =>8 %>
   </div></div><div class="form-row">
   <div class ="form-group col-md-4">
  <%= form.submit class: "btn btn-success"%>
