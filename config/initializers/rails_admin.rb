@@ -2,13 +2,20 @@ RailsAdmin.config do |config|
 
   ### Popular gems integration
 
-   ##config.authenticate_with do
-    ## warden.authenticate! scope: :user
-   ##end
-   ##config.current_user_method(&:current_user)
+   #config.authenticate_with do
+    #warden.authenticate! scope: :user
+   #end
+   #config.current_user_method(&:current_user)
+  config.authorize_with do
+    unless current_user.level == "master"
+      redirect_to(
+        main_app.root_path,
+        alert: "You are not permitted to view this page"
+      )
+  end
 
-  ## == Cancan ==
-  # config.authorize_with :cancan
+  config.current_user_method { current_user }
+end
 
   ## == Pundit ==
   # config.authorize_with :pundit
