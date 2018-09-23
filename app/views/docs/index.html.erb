@@ -21,8 +21,8 @@
       <tr>
         <td><%= doc.title %></td>
         <td><%= doc.targetReleaseVersion %></td>
-        <td><%= doc.documentStatus%></td>
-        <td><%= doc.qaOwner  %></td>
+        <td><span class="badge badge-pill badge-success"><%= doc.documentStatus%></span></td>
+        <td><span class="badge badge-pill badge-success"><%= doc.qaOwner  %></span></td>
         <td><%= link_to 'View', doc, class: "btn btn-warning" %></td>
         <td><%= link_to 'Edit', edit_doc_path(doc),  class: "btn btn-info"%> </td>
         <td><%= link_to doc, :method => :delete, data: {confirm: 'You are about to delete a PRD, are you sure you want to continue?'} do%><span class = "glyphicon glyphicon-trash"></span></td><% end %>

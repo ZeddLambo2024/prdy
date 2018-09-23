@@ -4,58 +4,68 @@
 
 <div class = "panel panel-default">
   <div class = "panel-heading">
-    <h1><%= @doc.title %> - <span class="badge badge-pill badge-primary"><%=@doc.qaOwner%></span></h1>
+    <h1><%= @doc.title %> <span class="badge bg-danger"><%=@doc.qaOwner%></span></h1>
 </div>
   <div class = "panel-body">
-<div class="form-group col-md-2 mb-3 ">
-  <strong>Feature Status:</strong><br>
+
+<div class="card text-white bg-warning col-md-6 ">
+<br><div class="card-header"><%=@doc.title %> Details</div>
+<div class="card-body">
+ <div class="row">   
+<div class="form-group col-md-6">
+  <strong>Feature Status:</strong>
   <%= @doc.documentStatus %>
 </div>
-<div class="form-group col-md-3 mb-3 ">
-  <strong>Dev Begins Work (tentative):</strong></br>
+</div>
+  <div class ="row">
+<div class="form-group col-md-6  ">
+  <strong>Dev Begins Work (tentative):</strong>
   <%= @doc.dateExpectedStartWork %>
-</div>
-<div class="form-group col-md-2 mb-3 ">
-  <strong>Document Owner:</strong><br>
+</div></div>
+<div class ="row">
+<div class="form-group col-md-6 ">
+  <strong>Document Owner:</strong>
   <%= @doc.documentOwner %>
-</div>
-<div class="form-group col-md-2 mb-3 ">
-  <strong>Designer Owner:</strong><br>
+</div></div>
+<div class="row">
+<div class="form-group col-md-6 ">
+  <strong>Designer Owner:</strong>
   <%= @doc.designerOwner %>
-</div>
-<div class="form-group col-md-2 mb-3 ">
-  <strong>Development Owner:</strong><br>
+</div></div>
+<div class="row">
+<div class="form-group col-md-6 ">
+  <strong>Development Owner:</strong>
   <%= @doc.developerOwner %>
-</div>
-<div class="form-group col-md-12 mb-3 ">
+</div></div></div></div><br><br>
+<div class="form-group col-md-12 mb-3  ">
   <strong>Goals:</strong><br>
-  <%= @doc.goals %>
+  <%= @doc.goals.gsub('\n', '<br>') %>
 </div>
-<div class="form-group col-md-6 mb-3 ">
+<div class="form-group col-md-6  ">
   <strong>Background & Strategic Fit:</strong><br>
-  <%= @doc.backgroundStrategicFit %>
+  <%= @doc.backgroundStrategicFit.gsub('\n', '<br>') %>
 </div>
 
 <div class="form-group col-md-6 mb-3 ">
   <strong>Assumptions:</strong><br>
-  <%= @doc.assumptions %>
+  <%= @doc.assumptions.gsub('\n', '<br>') %>
 </div>
 <div class="form-group col-md-6 mb-3 ">
   <strong>Requirements:</strong><br>
-  <%= @doc.requirements %>
+  <%= @doc.requirements.gsub('\n', '<br>') %>
 </div>
 
 <div class="form-group col-md-6 mb-3 ">
   <strong>User Interaction Notes:</strong><br>
-  <%= @doc.userInteractionNotes %>
+  <%= @doc.userInteractionNotes.gsub('\n', '<br>') %>
 </div>
 <div class="form-group col-md-6 mb-3 ">
   <strong>Open Questions:</strong><br>
-  <%= @doc.questions %>
+  <%= @doc.questions.gsub('\n', '<br>') %>
 </div>
 <div class="form-group col-md-6 mb-3 ">
   <strong>Not Doing:</strong><br>
-  <%= @doc.notDoing %>
+  <%= @doc.notDoing.gsub('\n', '<br>') %>
 </div></div>
   <div class = "panel-footer">
 <%= link_to 'Edit', edit_doc_path(@doc), class: "btn btn-warning" %> |
