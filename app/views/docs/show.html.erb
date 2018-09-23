@@ -4,79 +4,59 @@
 
 <div class = "panel panel-default">
   <div class = "panel-heading">
-    <h1><%= @doc.title %></h1>
+    <h1><%= @doc.title %> - <%=@doc.qaOwner%></h1>
 </div>
   <div class = "panel-body">
-<p>
-  <strong>Targetreleaseversion:</strong>
-  <%= @doc.targetReleaseVersion %>
-</p>
-
-<p>
-  <strong>Dateexpectedstartwork:</strong>
-  <%= @doc.dateExpectedStartWork %>
-</p>
-
-<p>
-  <strong>Documentstatus:</strong>
+<div class="form-group col-md-2 mb-3 ">
+  <strong>Feature Status:</strong><br>
   <%= @doc.documentStatus %>
-</p>
-
-<p>
-  <strong>Documentowner:</strong>
-  <%= @doc.documentOwner %>
-</p>
-
-<p>
-  <strong>Designerowner:</strong>
-  <%= @doc.designerOwner %>
-</p>
-
-<p>
-  <strong>Developerowner:</strong>
-  <%= @doc.developerOwner %>
-</p>
-
-<p>
-  <strong>Qaowner:</strong>
-  <%= @doc.qaOwner %>
-</p>
-
-<p>
-  <strong>Goals:</strong>
-  <%= @doc.goals %>
-</p>
-
-<p>
-  <strong>Backgroundstrategicfit:</strong>
-  <%= @doc.backgroundStrategicFit %>
-</p>
-
-<p>
-  <strong>Assumptions:</strong>
-  <%= @doc.assumptions %>
-</p>
-
-<p>
-  <strong>Requirements:</strong>
-  <%= @doc.requirements %>
-</p>
-
-<p>
-  <strong>Userinteractionnotes:</strong>
-  <%= @doc.userInteractionNotes %>
-</p>
-
-<p>
-  <strong>Questions:</strong>
-  <%= @doc.questions %>
-</p>
-
-<p>
-  <strong>Notdoing:</strong>
-  <%= @doc.notDoing %>
-</p>
 </div>
+<div class="form-group col-md-3 mb-3 ">
+  <strong>Dev Begins Work (tentative):</strong></br>
+  <%= @doc.dateExpectedStartWork %>
+</div>
+<div class="form-group col-md-2 mb-3 ">
+  <strong>Document Owner:</strong><br>
+  <%= @doc.documentOwner %>
+</div>
+<div class="form-group col-md-2 mb-3 ">
+  <strong>Designer Owner:</strong><br>
+  <%= @doc.designerOwner %>
+</div>
+<div class="form-group col-md-2 mb-3 ">
+  <strong>Development Owner:</strong><br>
+  <%= @doc.developerOwner %>
+</div>
+<div class="form-group col-md-12 mb-3 ">
+  <strong>Goals:</strong><br>
+  <%= @doc.goals %>
+</div>
+<div class="form-group col-md-6 mb-3 ">
+  <strong>Background & Strategic Fit:</strong><br>
+  <%= @doc.backgroundStrategicFit %>
+</div>
+
+<div class="form-group col-md-6 mb-3 ">
+  <strong>Assumptions:</strong><br>
+  <%= @doc.assumptions %>
+</div>
+<div class="form-group col-md-6 mb-3 ">
+  <strong>Requirements:</strong><br>
+  <%= @doc.requirements %>
+</div>
+
+<div class="form-group col-md-6 mb-3 ">
+  <strong>User Interaction Notes:</strong><br>
+  <%= @doc.userInteractionNotes %>
+</div>
+<div class="form-group col-md-6 mb-3 ">
+  <strong>Open Questions:</strong><br>
+  <%= @doc.questions %>
+</div>
+<div class="form-group col-md-6 mb-3 ">
+  <strong>Not Doing:</strong><br>
+  <%= @doc.notDoing %>
+</div></div>
   <div class = "panel-footer">
 <%= link_to 'Edit', edit_doc_path(@doc), class: "btn btn-warning" %> |
-<%= link_to 'Back', docs_path, class: "btn btn-info" %></div></div>
+<%= link_to 'Back', docs_path, class: "btn btn-info" %>
