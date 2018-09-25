@@ -76,12 +76,12 @@ def correct_user
     end
 
     def sortable_columns
-    ["qaOwner", "documentStatus"]
+    ["docs.qaOwner", "docs.documentStatus"]
   end
 
   def sort_column
-    sortable_columns.include?(params[:column]) ? params[:column] : "qaOwner"
-    sortable_columns.include?(params[:column]) ? params[:column] : "documentStatus"
+    sortable_columns.include?(params[:column]) ? params[:column] : "docs.qaOwner"
+    sortable_columns.include?(params[:column]) ? params[:column] : "docs.documentStatus"
 
   end
 
