@@ -2,10 +2,13 @@ class DocsController < ApplicationController
   before_action :set_doc, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
   before_action :correct_user, only: [:edit, :update, :destroy]
+  helper_method :sort_column, :sort_direction
   # GET /docs
   # GET /docs.json
   def index
     @docs = Doc.all
+    @docs = Doc.order("#{sort_column} #{sort_direction}")
+
   end
 
   # GET /docs/1
@@ -71,4 +74,19 @@ def correct_user
     def doc_params
       params.require(:doc).permit(:title, :targetReleaseVersion, :dateExpectedStartWork, :documentStatus, :documentOwner, :designerOwner, :developerOwner, :qaOwner, :goals, :backgroundStrategicFit, :assumptions, :requirements, :userInteractionNotes, :questions, :notDoing)
     end
+
+    def sortable_columns
+    ["qaOwner", "documentStatus"]
+  end
+
+  def sort_column
+    sortable_columns.include?(params[:column]) ? params[:column] : "qaOwner"
+    sortable_columns.include?(params[:column]) ? params[:column] : "documentStatus"
+
+  end
+
+  def sort_direction
+    %w[asc desc].include?(params[:direction]) ? params[:direction] : "desc"
+    %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
+  end
 end

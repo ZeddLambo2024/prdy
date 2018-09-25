@@ -9,8 +9,9 @@
       <th>Feature Title</th>
   
       <th>Development Starts (tentative)</th>
-      <th>Current Status</th>
-      <th>Priority</th>
+      <th><%= sort_link "qaOwner","Priority" %></th>
+      <th><%= sort_link "documentStatus", "Status" %></th>
+      
     </tr>
   </thead>
 
@@ -21,10 +22,11 @@
       <tr>
         <td><%= doc.title %></td>
         <td><%= doc.targetReleaseVersion %></td>
-        <td><span class="badge badge-pill badge-success"><%= doc.documentStatus%></span></td>
         <td><span class="badge badge-pill badge-success"><%= doc.qaOwner  %></span></td>
-        <td><%= link_to 'View', doc, class: "btn btn-warning" %></td>
-        <td><%= link_to 'Edit', edit_doc_path(doc),  class: "btn btn-info"%> </td>
+        <td><span class="badge badge-pill badge-success"><%= doc.documentStatus%></span></td>
+        
+        <td><%= link_to 'Edit PRD', edit_doc_path(doc),  class: "btn btn-info"%></td>
+        <td><%= link_to 'Preview', doc, class: "btn btn-warning" %></td>
         <td><%= link_to doc, :method => :delete, data: {confirm: 'You are about to delete a PRD, are you sure you want to continue?'} do%><span class = "glyphicon glyphicon-trash"></span></td><% end %>
       </tr>
       <% end %>
